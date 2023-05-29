@@ -1,0 +1,1 @@
+export const urlAzure = "https://appinyectarpedido.mariaalmenara.net:2715/"
