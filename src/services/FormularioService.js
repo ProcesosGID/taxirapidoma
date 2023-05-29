@@ -38,3 +38,22 @@ export async function insertConteo(datos, setValue) {
       // Maneja el error de acuerdo a tus necesidades
     }
   }
+
+  export async function getFormularios(datos, setValue) {
+    try {
+      var data = JSON.stringify(datos);
+      var config = {
+        method: 'post',
+        url: `${urlAzure}formulario/list`,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        data: data
+      };
+      const response = await axios(config);
+      setValue(response.data);
+    } catch (error) {
+      console.error('Error al realizar la solicitud:', error);
+      // Maneja el error de acuerdo a tus necesidades
+    }
+  }

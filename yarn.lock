@@ -807,14 +807,14 @@
   resolved "https://registry.npmjs.org/@mui/core-downloads-tracker/-/core-downloads-tracker-5.13.3.tgz"
   integrity sha512-w4//nRIi9fiMow/MmhkForOezd8nc229EpSZZ5DzwpJNOmAXwypFTapOUVAGTUQiTJyeZXUNbQqYuUIrIs2nbg==
 
-"@mui/icons-material@>=5":
+"@mui/icons-material@^5.11.16", "@mui/icons-material@>=5":
   version "5.11.16"
   resolved "https://registry.npmjs.org/@mui/icons-material/-/icons-material-5.11.16.tgz"
   integrity sha512-oKkx9z9Kwg40NtcIajF9uOXhxiyTZrrm9nmIJ4UjkU2IdHpd4QVLbCc/5hZN/y0C6qzi2Zlxyr9TGddQx2vx2A==
   dependencies:
     "@babel/runtime" "^7.21.0"
 
-"@mui/material@^5.0.0", "@mui/material@>=5":
+"@mui/material@^5.0.0", "@mui/material@^5.13.3", "@mui/material@>=5":
   version "5.13.3"
   resolved "https://registry.npmjs.org/@mui/material/-/material-5.13.3.tgz"
   integrity sha512-10pek+Bz+PZ4rjUf3KTKfXWjPMUqU1nSnRPf4DAXABhsjzelGGfGW/EICgrLRrttYplTJZhoponWALezAge8ug==
@@ -1324,6 +1324,11 @@ escape-string-regexp@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
+
+export-to-csv@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/export-to-csv/-/export-to-csv-0.2.1.tgz"
+  integrity sha512-KTbrd3CAZ0cFceJEZr1e5uiMasabeCpXq1/5uvVxDl53o4jXJHnltasQoj2NkzrxD8hU9kdwjnMhoir/7nNx/A==
 
 faye-websocket@0.11.4:
   version "0.11.4"

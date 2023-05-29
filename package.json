@@ -9,7 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.3",
     "axios": "^1.4.0",
+    "export-to-csv": "^0.2.1",
     "firebase": "^9.22.1",
     "material-react-table": "^1.11.5",
     "moment": "^2.29.4",

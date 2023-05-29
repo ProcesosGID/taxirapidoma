@@ -15,7 +15,7 @@ import { useEffect } from "react";
 
 export function Formulario() {
   const [response,setResponse] = useState([]);
-  const [guardar,setGuardar] = useState([]);
+  const [guardar,setGuardar] = useState();
   const { register, formState: { errors }, handleSubmit, reset, watch, setValue } = useForm({defaultValues:{
     codigo:"",correo:"",nombres:"",documento:"",telefono:"",tipoCarro:"",fechaNacimiento:""
   }});
