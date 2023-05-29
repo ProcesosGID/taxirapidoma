@@ -11,13 +11,39 @@ import 'react-phone-number-input/style.css';
 import { RiFlagLine } from 'react-icons/ri';
 import * as FormularioService from '../services/FormularioService';
 import { useState } from "react";
+import { useEffect } from "react";
 
 export function Formulario() {
   const [response,setResponse] = useState([]);
+  const [guardar,setGuardar] = useState([]);
   const { register, formState: { errors }, handleSubmit, reset, watch, setValue } = useForm({defaultValues:{
     codigo:"",correo:"",nombres:"",documento:"",telefono:"",tipoCarro:"",fechaNacimiento:""
   }});
+
+  const onSubmit = async (data) => {
+    // Verificar si el código del pedido de taxi está registrado
+    try {
+      const response = await FormularioService.getCodigoTaxi(setValue, data.codigo);
+      console.log(response); // Muestra el cuerpo de la respuesta en la consola
+    } catch (error) {
+      if (error.response && error.response.status === 404) {
+        console.log('El recurso no fue encontrado');
+        setGuardar(data);
+      } else {
+        console.log('Ocurrió un error al obtener el código del taxi:', error.message);
+        swal('error', "El codigo del taxi ya existe")
+      }
+    }
+  };
+  useEffect(() => {
+    if(guardar){
+      insertar(guardar);
+    }
+  }, [guardar])
   
+
+
+
   function insertar(data) {
     const datos = {
       codigo: data.codigo,
@@ -52,7 +78,7 @@ function handlePhoneInputChange(value) {
            {/* <h1>Viendo: {watch("codigo")}</h1>  */}
         </div>
 
-        <form className="entradas" onSubmit={handleSubmit(insertar)}>
+        <form className="entradas" onSubmit={handleSubmit(onSubmit)}>
           <ContainerInputs>
             <div className="subcontainer">
               <h4>Código del pedido de taxi:</h4>
