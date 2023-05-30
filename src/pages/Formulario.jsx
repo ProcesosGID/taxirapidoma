@@ -211,6 +211,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  h4 {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+   }
   @media screen and (max-width: 507px) {
     margin-top: 0;
   }
@@ -259,6 +263,7 @@ const Container = styled.div`
 `;
 const TituloPrincipal =styled.h1`
 font-size:2em;
+color:#ff0000;
 @media screen and (max-width: 507px) {
   padding-top: 1em;
   text-align: center;
@@ -281,16 +286,16 @@ const ContainerInputs = styled.div`
       border: 2px solid #e8e8e8;
       padding: 15px;
       border-radius: 10px;
-      background-color: #212121;
+      background-color: white;
       font-size: small;
       font-weight: bold;
-      color: white;
+      color: black;
       width: 70%;
       text-align: center;
       &:focus {
         outline-color: white;
-        background-color: #212121;
-        color: #e8e8e8;
+        background-color: white;
+        color: black;
         box-shadow: 5px 5px #888888;
       }
       &::-webkit-calendar-picker-indicator {
@@ -310,10 +315,10 @@ const ContainerInputs = styled.div`
       border: 2px solid #e8e8e8;
   padding: 15px;
   border-radius: 10px;
-  background-color: #212121;
+  background-color: white;
   font-size: small;
   font-weight: bold;
-  color: white;
+  color: black;
   width: 70%;
   border-right: 8px solid transparent;
   @media screen and (max-width: 479px) {
@@ -333,17 +338,21 @@ const ContainerInputs = styled.div`
       border: 2px solid rgb(232, 232, 232);
       padding: 15px;
       border-radius: 10px;
-      background-color: rgb(33, 33, 33);
+      background-color: white;
       font-size: small;
       font-weight: bold;
-      color: white;
+      color: black;
       text-align: start;
       width: 100%;
+      &::placeholder {
+        color:black;
+      }
       &:focus {
         outline-color: white;
-        background-color: #212121;
-        color: #e8e8e8;
+        background-color: white;
+        color: black;
         box-shadow: 5px 5px #888888;
+        border:none !important;
       }
     }
   }
@@ -358,20 +367,23 @@ const Inputs = styled.input`
   border: 2px solid #e8e8e8;
   padding: 15px;
   border-radius: 10px;
-  background-color: #212121;
+  background-color: white;
   font-size: small;
   font-weight: bold;
   text-align: center;
-  color: white;
+  color: black;
   text-align: start;
   width: 70%;
+  ::placeholder {
+    color:black;
+  }
   @media screen and (max-width: 479px) {
     width: 90%;
   }
   &:focus {
     outline-color: white;
-    background-color: #212121;
-    color: #e8e8e8;
+    background-color: white;
+    color: black;
     box-shadow: 5px 5px #888888;
   }
 `;
